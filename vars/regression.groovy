@@ -16,12 +16,9 @@ def call(body) {
         checkout scm
        }  
     stage("approve deploy"){
-      node('paused'){
-        try{
-          abortPreviousBuilds(stage: "approve deploy" ) 
           timeout(time: 20 , unit: 'MINUTES' )
-           input message:'approve this build'
-           milestone()   
+          input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
+          input "Deploy to prod?"
         } catch (err) {
           println err
         }
