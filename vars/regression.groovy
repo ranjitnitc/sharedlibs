@@ -20,7 +20,7 @@ def call(body) {
           input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
           input "Deploy to prod?"
         } 
-      }
+      
     }
   }
 }
