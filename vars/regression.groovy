@@ -2,6 +2,5 @@
 
 def call(){
   def=config.get(name, false)
-  
-echo "Hey ${name}, How are you??"
+  echo "Hey ${name}, How are you??"
 }
