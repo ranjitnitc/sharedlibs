@@ -19,9 +19,7 @@ def call(body) {
           timeout(time: 20 , unit: 'MINUTES' )
           input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
           input "Deploy to prod?"
-        } catch (err) {
-          println err
-        }
+        } 
       }
     }
   }
