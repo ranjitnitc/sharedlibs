@@ -6,6 +6,8 @@ def call(body) {
   body.delegate = config
   body()
   
-  def name =config.get('name', false)
+  def name = config.get('name', false)
+  def state = config.get('state', bihar)
   echo "Hey ${name}, How are you??"
+  
 }
