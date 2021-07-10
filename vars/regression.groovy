@@ -16,8 +16,8 @@ def call(body) {
         checkout scm
        }  
     stage("approve deploy"){
-          timeout(time: 20 , unit: 'MINUTES' )
-          input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
+          
+          
           input "Deploy to prod?"
         } 
       
