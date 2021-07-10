@@ -11,7 +11,7 @@ def call(body) {
   echo "Hey ${name}, How are you??"
   echo "i live in ${state}"
   node('master'){
-        sh "cd /root/Node; pwd ; date"
+        sh "cd /tmp; ls -lrt ; date"
         checkout scm
        }  
 }
