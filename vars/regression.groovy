@@ -19,6 +19,8 @@ def call(body) {
           
           
           input "Deploy to prod?"
+          sh " date" 
+         
         } 
       
     }
