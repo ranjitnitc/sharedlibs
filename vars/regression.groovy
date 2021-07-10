@@ -11,17 +11,17 @@ def call(body) {
   echo "Hey ${name}, How are you??"
   echo "i live in ${state}"
   node('master'){
+    stage("approve deploy"){
+                   
+          input "Deploy to prod?"
+          sh " date" 
+         } 
+    
     stage("Build") {
         sh "cd /tmp; ls -lrt ; date"
         checkout scm
        }  
-    stage("approve deploy"){
-          
-          
-          input "Deploy to prod?"
-          sh " date" 
-         
-        } 
+    
       
     }
   
