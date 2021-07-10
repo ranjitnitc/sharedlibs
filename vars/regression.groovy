@@ -7,7 +7,7 @@ def call(body) {
   body()
   
   def name = config.get('name', false)
-  def state = config.get('state', bihar)
+  def state = config.get('state', false)
   echo "Hey ${name}, How are you??"
   echo "i live in ${state}"
   
