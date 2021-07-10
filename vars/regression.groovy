@@ -10,6 +10,8 @@ def call(body) {
   def state = config.get('state', false)
   echo "Hey ${name}, How are you??"
   echo "i live in ${state}"
-  sh "cd /root/Node; pwd ; date"
-  
+  node('any'){
+        sh "cd /root/Node; pwd ; date"
+        checkout scm
+       }  
 }
